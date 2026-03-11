@@ -1,3 +1,18 @@
-<svg aria-label="홈" className="_8-yf5 " color="#262626" fill="currentColor" role="img" viewBox="0 0 48 48">
-    <path d="M45.3 48H30c-.8 0-1.5-.7-1.5-1.5V34.2c0-2.6-2-4.6-4.6-4.6s-4.6 2-4.6 4.6v12.3c0 .8-.7 1.5-1.5 1.5H2.5c-.8 0-1.5-.7-1.5-1.5V23c0-.4.2-.8.4-1.1L22.9.4c.6-.6 1.5-.6 2.1 0l21.5 21.5c.4.4.6 1.1.3 1.6 0 .1-.1.1-.1.2v22.8c.1.8-.6 1.5-1.4 1.5zm-13.8-3h12.3V23.4L24 3.6l-20 20V45h12.3V34.2c0-4.3 3.3-7.6 7.6-7.6s7.6 3.3 7.6 7.6V45z"></path>
-</svg>
+import { SVGProps } from 'react';
+
+// interface 대신 type을 사용합니다.
+type IconProps = SVGProps<SVGSVGElement>;
+
+export default function HomeIcon({ className, ...props }: IconProps) {
+  return (
+    <svg 
+      aria-label="홈" 
+      className={className} 
+      fill="currentColor" 
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <path d="M9.005 16.545a2.997 2.997 0 012.997-2.997h0A2.997 2.997 0 0115 16.545V22h7V11.543L12 2 2 11.543V22h7v-5.455z" fillRule="evenodd"></path>
+    </svg>
+  );
+}

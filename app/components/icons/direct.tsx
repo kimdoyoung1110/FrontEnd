@@ -1,3 +1,18 @@
-<svg aria-label="Direct" fill="currentColor" role="img" viewBox="0 0 48 48">
-    <path d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 3.1.3 3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 22.6c.1.6.6 1 1.2 1.1h.2c.5 0 1-.3 1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 6.1h35.5L18 18.7 5.2 6.1zm18.7 33.6l-4.4-18.4L42.4 8.6 23.9 39.7z"></path>
-</svg>
+import { SVGProps } from 'react';
+
+type IconProps = SVGProps<SVGSVGElement>;
+
+export default function DirectIcon({ className, ...props }: IconProps) {
+  return (
+    <svg 
+      aria-label="Direct" 
+      className={className} 
+      fill="currentColor" 
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <line fill="none" stroke="currentColor" strokeLinejoin="round" strokeWidth="2" x1="22" x2="9.218" y1="3" y2="10.083"></line>
+      <polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" strokeLinejoin="round" strokeWidth="2"></polygon>
+    </svg>
+  );
+}
